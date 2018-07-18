@@ -87,20 +87,20 @@ $(document).ready(function(){
 	/*	Menu item highlighting
 	/* ========================================================================= */
 
-	// jQuery('#nav').singlePageNav({
-	// 	offset: jQuery('#nav').outerHeight(),
-	// 	filter: ':not(.external)',
-	// 	speed: 2000,
-	// 	currentClass: 'current',
-	// 	easing: 'easeInOutExpo',
-	// 	updateHash: true,
-	// 	beforeStart: function() {
-	// 		console.log('begin scrolling');
-	// 	},
-	// 	onComplete: function() {
-	// 		console.log('done scrolling');
-	// 	}
-	// });
+	jQuery('#nav').singlePageNav({
+		offset: jQuery('#nav').outerHeight(),
+		filter: ':not(.external)',
+		speed: 2000,
+		currentClass: 'current',
+		easing: 'easeInOutExpo',
+		updateHash: true,
+		beforeStart: function() {
+			console.log('begin scrolling');
+		},
+		onComplete: function() {
+			console.log('done scrolling');
+		}
+	});
 	
     $(window).scroll(function () {
         if ($(window).scrollTop() > 400) {
@@ -115,13 +115,13 @@ $(document).ready(function(){
 	/* ========================================================================= */	
 
     // Slider Height
-    var slideHeight = $(window).height();
+    // var slideHeight = $(window).height();
     
-    $('#home-slider, #slider, .sl-slider, .sl-content-wrapper').css('height',slideHeight);
+    // $('#home-slider, #slider, .sl-slider, .sl-content-wrapper').css('height',slideHeight);
 
-    $(window).resize(function(){'use strict',
-        $('#home-slider, #slider, .sl-slider, .sl-content-wrapper').css('height',slideHeight);
-    });
+    // $(window).resize(function(){'use strict',
+    //     $('#home-slider, #slider, .sl-slider, .sl-content-wrapper').css('height',slideHeight);
+    // });
 	
 	
 	
@@ -152,7 +152,8 @@ $(document).ready(function(){
 			
 		beforeShow: function () {
 			this.title = $(this.element).attr('title');
-			this.title = '<h3>' + this.title + '</h3>' + '<p>' + $(this.element).parents('.portfolio-item').find('img').attr('alt') + '</p>';
+            // this.title = '<h3>' + this.title + '</h3>' + '<p>' + $(this.element).parents('.portfolio-item').find('img').attr('alt') + '</p>';
+            this.title = '<h3>' + this.title + '</h3>' + '<p>' + $(this.element).attr('rel') + '</p>';
 		},
 		
 		helpers : {

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="tr" class="no-js">
+<!--<![endif]-->
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="keywords" content="dijital, dijital baskılı, baskılı, t-shirt, baskılı tişort, toptan t-shirt  " />
+	<meta name="description" content="Toptan baskılı tshirt de aracı değil ürecticiyiz." />
+	<title>Digit Baskı</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/slit-slider.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+	 crossorigin="anonymous">
+	<script src="js/modernizr-2.6.2.min.js"></script>
+
+</head>
+
+<body id="body">
+
+	<div id="preloader">
+		<div class="loder-box">
+			<div class="battery"></div>
+		</div>
+	</div>
+
+
+	<header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- responsive nav button -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<!-- /responsive nav button -->
+
+				<!-- logo -->
+				<div class="navbar-brand">
+					<a href="#body">
+						<img src="img/logo.svg" height="50">
+					</a>
+				</div>
+				<!-- /logo -->
+			</div>
+
+			<!-- main nav -->
+			<nav class="collapse navbar-collapse navbar-right" role="navigation">
+				<ul id="nav" class="nav navbar-nav">
+					<li>
+						<a href="index.html#body">Ana Sayfa</a>
+					</li>
+					<li>
+							<a href="index.html#testimonials">Hakkımızda </a>
+					</li>
+					<li>
+						<a href="index.htm#service">Servislerimiz</a>
+					</li>
+					<li>
+						<a href="index.html#portfolio">Galeri</a>
+					</li>
+					<li>
+						<a href="blog.html">Blog</a>
+					</li>
+					<li>
+						<a href="urunlerimiz.html">Ürünlerimiz</a>
+					</li>
+					<li>
+						<a href="index.html#contact">İletişim</a>
+					</li>
+				</ul>
+			</nav>
+			<!-- /main nav -->
+
+		</div>
+	</header>
+
+	<main class="site-content" role="main">
+    </main>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/gtag.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.singlePageNav.min.js"></script>
+	<script src="js/jquery.fancybox.pack.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+	<script src="js/jquery.slitslider.js"></script>
+	<script src="js/jquery.ba-cond.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script>
+	/* ========================================================================= */
+/*	Preloader
+/* ========================================================================= */
+
+jQuery(window).load(function(){
+
+$("#preloader").fadeOut("slow");
+
+});
+
+/* ========================================================================= */
+/*  Welcome Section Slider
+/* ========================================================================= */
+
+$(function() {
+
+var Page = (function() {
+
+	var $navArrows = $( '#nav-arrows' ),
+		$nav = $( '#nav-dots > span' ),
+		slitslider = $( '#slider' ).slitslider( {
+			onBeforeChange : function( slide, pos ) {
+
+				$nav.removeClass( 'nav-dot-current' );
+				$nav.eq( pos ).addClass( 'nav-dot-current' );
+
+			}
+		} ),
+
+		init = function() {
+
+			initEvents();
+			
+		},
+		initEvents = function() {
+
+			// add navigation events
+			$navArrows.children( ':last' ).on( 'click', function() {
+
+				slitslider.next();
+				return false;
+
+			} );
+
+			$navArrows.children( ':first' ).on( 'click', function() {
+				
+				slitslider.previous();
+				return false;
+
+			} );
+
+			$nav.each( function( i ) {
+			
+				$( this ).on( 'click', function( event ) {
+					
+					var $dot = $( this );
+					
+					if( !slitslider.isActive() ) {
+
+						$nav.removeClass( 'nav-dot-current' );
+						$dot.addClass( 'nav-dot-current' );
+					
+					}
+					
+					slitslider.jump( i + 1 );
+					return false;
+				
+				} );
+				
+			} );
+
+		};
+
+		return { init : init };
+
+})();
+
+Page.init();
+
+});
+
+
+
+$(document).ready(function(){
+
+/* ========================================================================= */
+/*	Menu item highlighting
+/* ========================================================================= */
+
+// jQuery('#nav').singlePageNav({
+// 	offset: jQuery('#nav').outerHeight(),
+// 	filter: ':not(.external)',
+// 	speed: 2000,
+// 	currentClass: 'current',
+// 	easing: 'easeInOutExpo',
+// 	updateHash: true,
+// 	beforeStart: function() {
+// 		console.log('begin scrolling');
+// 	},
+// 	onComplete: function() {
+// 		console.log('done scrolling');
+// 	}
+// });
+
+$(window).scroll(function () {
+	if ($(window).scrollTop() > 400) {
+		$("#navigation").removeClass("animated-header");
+	} else {
+		$("#navigation").addClass("animated-header");
+	}
+});
+
+/* ========================================================================= */
+/*	Fix Slider Height
+/* ========================================================================= */	
+
+// Slider Height
+// var slideHeight = $(window).height();
+
+// $('#home-slider, #slider, .sl-slider, .sl-content-wrapper').css('height',slideHeight);
+
+// $(window).resize(function(){'use strict',
+//     $('#home-slider, #slider, .sl-slider, .sl-content-wrapper').css('height',slideHeight);
+// });
+
+
+
+$("#works, #testimonial").owlCarousel({	 
+	navigation : true,
+	pagination : false,
+	slideSpeed : 700,
+	paginationSpeed : 400,
+	singleItem:true,
+	navigationText: ["<i class='fa fa-angle-left fa-lg'></i>","<i class='fa fa-angle-right fa-lg'></i>"]
+});
+
+
+/* ========================================================================= */
+/*	Featured Project Lightbox
+/* ========================================================================= */
+
+$(".fancybox").fancybox({
+	padding: 0,
+
+	openEffect : 'elastic',
+	openSpeed  : 650,
+
+	closeEffect : 'elastic',
+	closeSpeed  : 550,
+
+	closeClick : true,
+		
+	beforeShow: function () {
+		this.title = $(this.element).attr('title');
+		// this.title = '<h3>' + this.title + '</h3>' + '<p>' + $(this.element).parents('.portfolio-item').find('img').attr('alt') + '</p>';
+		this.title = '<h3>' + this.title + '</h3>' + '<p>' + $(this.element).attr('rel') + '</p>';
+	},
+	
+	helpers : {
+		title : { 
+			type: 'inside' 
+		},
+		overlay : {
+			css : {
+				'background' : 'rgba(0,0,0,0.8)'
+			}
+		}
+	}
+});
+
+});
+
+	</script>
+</body>
+</html>
